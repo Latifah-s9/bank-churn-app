@@ -19,9 +19,8 @@ gender = st.selectbox("Gender", ["Female", "Male"])
 geo_germany = 1 if geography == "Germany" else 0
 geo_spain = 1 if geography == "Spain" else 0
 gender_male = 1 if gender == "Male" else 0
-
 features = np.array([[credit_score, age, balance, num_products, has_card,
-                      is_active, estimated_salary, geo_germany, geo_spain, gender_male]])
+                      is_active, estimated_salary, geo_germany, geo_spain, gender_male]]).reshape(1, -1)
 import os
 
 model_path = os.path.join(os.path.dirname(__file__), 'churn_model.pkl')
