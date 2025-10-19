@@ -22,8 +22,10 @@ gender_male = 1 if gender == "Male" else 0
 
 features = np.array([[credit_score, age, balance, num_products, has_card,
                       is_active, estimated_salary, geo_germany, geo_spain, gender_male]])
+import os
 
-with open('churn_model.pkl', 'rb') as file:
+model_path = os.path.join(os.path.dirname(__file__), 'churn_model.pkl')
+with open(model_path, 'rb') as file:
     model = pickle.load(file)
 
 if st.button("Predict"):
@@ -31,4 +33,4 @@ if st.button("Predict"):
     if prediction[0] == 1:
         st.error("⚠️ This customer is likely to LEAVE the bank.")
     else:
-        st.success("✅ This customer is likely to STAY with the bank.")
+        st.success("✅ This customer is likely to STAY with the bank .")
