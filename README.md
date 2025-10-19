@@ -22,7 +22,7 @@ A Machine Learning web app built with **Python**, **Scikit-Learn**, and **Stream
 ---
 
 ## 🌐 Live App
-🔗 [Try it here!](https://bank-churn-app-kbgegoiq4q46qurbzwnwg.streamlit.app/)
+🔗 [Try it here!](https://bank-churn-app-kbegeoi4q46uqrbruzwnwg.streamlit.app/)
 
 ---
 
